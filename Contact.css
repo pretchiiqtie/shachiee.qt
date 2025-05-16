@@ -1,0 +1,170 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+@font-face {
+    font-family: Caveat-Bold;
+    src: url(Fonts/Caveat-Bold.ttf);
+}
+
+@font-face {
+    font-family: Jua;
+    src: url(Fonts/Jua-Regular.ttf);
+}
+
+@font-face {
+    font-family: Chela;
+    src: url(Fonts/ChelaOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: Fugaz;
+    src: url(Fonts/FugazOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: Play;
+    src: url(Fonts/PlaywriteMXGuides-Regular.ttf);
+}
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(Achii12.jpg);
+    background-position: 50% 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+    position: relative;
+}
+
+#Achii{
+    color: pink;
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    color: pink;
+    font-size: 35px;
+    font-family: Caveat-Bold;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 0px
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+    margin-left: -50px;
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+
+ul li a:hover{
+    color: pink;
+}
+
+.First{
+  text-align: center;
+  font-family: Caveat-Bold;
+  color: pink;
+}
+
+.socials-container{
+  margin-left: 475px;
+  margin-top: 200px;
+  display: flex;
+  gap: 20px;
+  padding-bottom: 260px;
+}
+.socials-container a{
+  background-color: white;
+  padding: 1em;
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+.socials-container a svg{
+  height: 32px;
+}
+.socials-container a::before{
+  content: attr(data-social);
+  position: absolute;
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 100px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  transform: translateY(-30px) rotate(25deg);
+  opacity: 0;
+  transition: 200ms cubic-bezier(.42,0,.44,1.68);
+}
+.socials-container a:hover{
+  background-color: var(--accent-color);
+  fill: white;
+}
+.socials-container a::after{
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid var(--accent-color);
+  transform: translateY(0) rotate(25deg);
+  opacity: 0;
+  transition: 200ms cubic-bezier(.42,0,.44,1.68);
+}
+.socials-container a:hover::before{
+  transform: translateY(-65px) rotate(0);
+  opacity: 1;
+}
+.socials-container a:hover::after{
+  transform: translateY(-42px) rotate(0);
+  opacity: 1;
+}
